@@ -65,6 +65,12 @@ Molecule3dViewer.propTypes = {
     ),
 
     /**
+     * Property that can be used to change the representation of
+     * the molecule. Options include sticks, cartoon and sphere
+     */
+    shapes: PropTypes.array,
+
+    /**
      * The data that will be used to display the molecule in 3D
      * The data will be in JSON format
      * and should have two main dictionaries - atoms, bonds

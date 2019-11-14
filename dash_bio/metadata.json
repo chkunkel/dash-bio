@@ -1614,6 +1614,13 @@
         "required": false,
         "description": "Property that can be used to change the representation of\nthe molecule. Options include sticks, cartoon and sphere"
       },
+      "shapes": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "Property that can be used to change the representation of\nthe molecule. Options include sticks, cartoon and sphere"
+      },
       "modelData": {
         "type": {
           "name": "shape",

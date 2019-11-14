@@ -25,6 +25,7 @@ export default class Molecule3dViewer extends Component {
             this.props.backgroundColor !== nextProps.backgroundColor ||
             this.props.backgroundOpacity !== nextProps.backgroundOpacity ||
             this.props.styles !== nextProps.styles ||
+            this.props.shapes !== nextProps.shapes ||
             this.props.selectionType !== nextProps.selectionType ||
             (!this.props.selectedAtomIds && nextProps.selectedAtomIds) ||
             (this.props.selectedAtomIds && !nextProps.selectedAtomIds) ||
@@ -57,6 +58,23 @@ export default class Molecule3dViewer extends Component {
                 ? null
                 : selectionType.charAt(0).toUpperCase() +
                   selectionType.slice(1);
+
+        //        const shapes = [
+        //           {
+        //                type: 'Arrow',
+        //                color: '#00ff00',
+        //                start: {
+        //                    x: 0,
+        //                    y: 0,
+        //                    z: -2.5,
+        //                },
+        //                end: {
+        //                    x: 0,
+        //                    y: 0,
+        //                    z: 3,
+        //                },
+        //            },
+        //        ];
 
         return (
             <div id={id}>

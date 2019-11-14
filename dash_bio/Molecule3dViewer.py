@@ -21,6 +21,8 @@ the molecule. Options include sticks, cartoon and sphere. styles has the followi
 Those keys have the following types:
   - color (string; optional)
   - visualization_type (a value equal to: 'cartoon', 'sphere', 'stick'; optional)
+- shapes (list; optional): Property that can be used to change the representation of
+the molecule. Options include sticks, cartoon and sphere
 - modelData (dict; optional): The data that will be used to display the molecule in 3D
 The data will be in JSON format
 and should have two main dictionaries - atoms, bonds. modelData has the following type: dict containing keys 'atoms', 'bonds'.
@@ -31,12 +33,12 @@ Those keys have the following types:
 - selectedAtomIds (list; optional): Property that stores a list of all selected atoms
 - labels (list; optional): labels corresponding to the atoms of the molecule"""
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, selectionType=Component.UNDEFINED, backgroundColor=Component.UNDEFINED, backgroundOpacity=Component.UNDEFINED, styles=Component.UNDEFINED, modelData=Component.UNDEFINED, atomLabelsShown=Component.UNDEFINED, selectedAtomIds=Component.UNDEFINED, labels=Component.UNDEFINED, onRenderNewData=Component.UNDEFINED, onChangeSelection=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'selectionType', 'backgroundColor', 'backgroundOpacity', 'styles', 'modelData', 'atomLabelsShown', 'selectedAtomIds', 'labels']
+    def __init__(self, id=Component.UNDEFINED, selectionType=Component.UNDEFINED, backgroundColor=Component.UNDEFINED, backgroundOpacity=Component.UNDEFINED, styles=Component.UNDEFINED, shapes=Component.UNDEFINED, modelData=Component.UNDEFINED, atomLabelsShown=Component.UNDEFINED, selectedAtomIds=Component.UNDEFINED, labels=Component.UNDEFINED, onRenderNewData=Component.UNDEFINED, onChangeSelection=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'selectionType', 'backgroundColor', 'backgroundOpacity', 'styles', 'shapes', 'modelData', 'atomLabelsShown', 'selectedAtomIds', 'labels']
         self._type = 'Molecule3dViewer'
         self._namespace = 'dash_bio'
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'selectionType', 'backgroundColor', 'backgroundOpacity', 'styles', 'modelData', 'atomLabelsShown', 'selectedAtomIds', 'labels']
+        self.available_properties = ['id', 'selectionType', 'backgroundColor', 'backgroundOpacity', 'styles', 'shapes', 'modelData', 'atomLabelsShown', 'selectedAtomIds', 'labels']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')
